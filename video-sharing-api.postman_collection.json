@@ -1,0 +1,153 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "Scalable Video Sharing API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Signup",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"testpass\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:7071/api/auth/signup",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "7071",
+          "path": ["api", "auth", "signup"]
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"testpass\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:7071/api/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "7071",
+          "path": ["api", "auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "List Videos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:7071/api/videos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "7071",
+          "path": ["api", "videos"]
+        }
+      }
+    },
+    {
+      "name": "Register Video",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer <JWT_TOKEN>" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Sample Video\",\n  \"description\": \"A test video\",\n  \"videoUrl\": \"https://example.com/video.mp4\",\n  \"thumbnailUrl\": \"https://example.com/thumb.jpg\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:7071/api/videos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "7071",
+          "path": ["api", "videos"]
+        }
+      }
+    },
+    {
+      "name": "Generate Upload URL",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer <JWT_TOKEN>" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"filename\": \"video.mp4\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:7071/api/videos/uploadUrl",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "7071",
+          "path": ["api", "videos", "uploadUrl"]
+        }
+      }
+    },
+    {
+      "name": "Get Video Details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:7071/api/videos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "7071",
+          "path": ["api", "videos", "1"]
+        }
+      }
+    },
+    {
+      "name": "List Comments",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:7071/api/videos/1/comments",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "7071",
+          "path": ["api", "videos", "1", "comments"]
+        }
+      }
+    },
+    {
+      "name": "Add Comment",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer <JWT_TOKEN>" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"Nice video!\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:7071/api/videos/1/comments",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "7071",
+          "path": ["api", "videos", "1", "comments"]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "bindings": [
+    {
+      "authLevel": "ANONYMOUS",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "options"
+      ],
+      "route": "videos/{id}"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "SQL_SERVER": "",
+    "SQL_DATABASE": "",
+    "SQL_USER": "",
+    "SQL_PASSWORD": "",
+    "SQL_ENCRYPT": "",
+    "BLOB_CONNECTION_STRING": "",
+    "BLOB_ACCOUNT": "",
+    "BLOB_KEY": "",
+    "BLOB_CONTAINER": "",
+    "JWT_SECRET": "",
+    "JWT_EXPIRES_IN": ""
+  }
+}

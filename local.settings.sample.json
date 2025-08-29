@@ -1,0 +1,17 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "SQL_SERVER": "localhost",
+    "SQL_DATABASE": "videos",
+    "SQL_USER": "sa",
+    "SQL_PASSWORD": "yourStrong(!)Password",
+    "SQL_ENCRYPT": "false",
+    "JWT_SECRET": "replace-with-strong-secret",
+    "JWT_EXPIRES_IN": "3600",
+    "BLOB_CONNECTION_STRING": "UseDevelopmentStorage=true",
+    "BLOB_CONTAINER": "uploads",
+    "ALLOWED_ORIGINS": "*"
+  }
+}
